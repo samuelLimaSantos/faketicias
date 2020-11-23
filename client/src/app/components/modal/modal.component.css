@@ -1,0 +1,32 @@
+
+.modal-content header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.modal-content header span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.modal-content header img {
+  cursor: pointer;
+}
+
+.modal-content .description-block{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.modal-content .description-block app-button {
+  margin: 0 auto;
+}
+
+
+
+
+

@@ -1,0 +1,37 @@
+.container-not-found {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-not-found .content-not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: bounceIn 1s ease-in;
+}
+
+.container-not-found .content-not-found img {
+  width: 400px;
+  margin-bottom: 32px;
+}
+
+.container-not-found .content-not-found h2 {
+  margin-bottom: 24px;
+}
+
+
+
+
+@media(max-width: 450px) {
+  .container-not-found .content-not-found img {
+    width: 300px;
+  }
+
+  .container-not-found .content-not-found h2 {
+    font-size: 20px;
+  }
+}

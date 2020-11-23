@@ -1,0 +1,55 @@
+.container-landing {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../../../assets/background.svg') right bottom no-repeat;
+  background-size: 500px;
+}
+
+.content-landing {
+  width: 60%;
+  max-width: 700px;
+  height: 50vh;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.content-landing img {
+  justify-self: center;
+  width: 500px;
+}
+
+.content-landing p {
+  font-size: 32px;
+  color: #25282B;
+  text-align: center;
+  animation: bounceIn 1s ease-in;
+}
+
+.content-landing app-button {
+  justify-self: center;
+}
+
+.content-landing button:hover {
+  opacity: 0.9;
+}
+
+@media(max-width: 570px) {
+  .content-landing img {
+    width: 300px;
+  }
+
+  .content-landing p  {
+    font-size: 16px;
+  }
+
+  .container-landing {
+    background: none;
+  }
+}

@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F2F0F0;
+  width: 100%;
+  height: 100%;
+}
+
+
+body, input, button, textarea {
+  font: 400 18px 'Roboto', sans-serif;
+  color: #25282B;
+}
+
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

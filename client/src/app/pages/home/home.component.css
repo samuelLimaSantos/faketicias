@@ -1,0 +1,48 @@
+.home-container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 10% 90%;
+}
+
+
+.home-container app-header {
+  border-bottom: 1px solid #E32121;
+  background-color: #960B0B;
+
+}
+
+.home-container .table-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: bounceIn 1s ease-in;
+
+}
+
+.home-container .table-content  div {
+  width: 50%;
+
+  max-width: 600px;
+}
+
+.home-container .table-content table {
+  width: 100%;
+}
+
+.home-container .table-content .menu-item {
+  cursor: pointer;
+}
+
+.home-container .table-content .menu-item:hover td {
+  color: #E32121;
+}
+
+@media (max-width: 767px) {
+  .home-container {
+    grid-template-rows: 17% 85%;
+
+  }
+}

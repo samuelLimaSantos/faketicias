@@ -1,0 +1,9 @@
+<div *ngIf="locationDTO; else elseBlock">
+  <button class="button-style" routerLink="{{locationDTO}}">{{textDTO}}</button>
+
+
+</div>
+<ng-template #elseBlock>
+  <button class="button-style">{{textDTO}}</button>
+
+</ng-template>
