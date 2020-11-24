@@ -20,20 +20,28 @@
 
 ## Back-end
 
-  [] 1. Inicializar um projeto com Flask (Python)
+  [x] 1. Inicializar um projeto com Flask (Python)
 
   ## Banco de dados
 
-    [] 1. Modelar o banco de dados, conforme especificação;
+    [x] 1. Modelar o banco de dados, conforme especificação;
   
-  [] 2. Criação da camada de rotas
+  [x] 2. Criação da camada de rotas
 
-  [] 3. Criação da camada de controlador
+  [x] 3. Criação da camada de controlador
 
-  [] 4. Integração com o banco de dados com SQLAlchemy
+  bonus [x] - Criar camada de models
+
+  [x] 4. Integração com o banco de dados com SQLAlchemy
+
 
   [] 5. Integração com o Front-end
 
+  [] - Bônus -> Criar POST Method
+
+  [] - Bônus -> Criar PUT Method
+
+  [] - Bônus -> Criar DELETE Method
 
 
 
