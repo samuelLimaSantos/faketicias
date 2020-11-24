@@ -5,7 +5,21 @@
   </header>
 
   <div class="description-block">
-    <p>Hamburguer: Duas fatias do pão fofinho, queijo, hamburguer e salada</p>
+
+      <span>
+        {{ detailsItem.description }}
+      </span>
+      
+      <h3>
+        Ingredientes:
+      </h3>
+
+      <section>
+        <span *ngFor="let recipe of detailsItem.menu">
+          {{ recipe.name }} -> {{ recipe.quantity }}
+        </span>
+      </section>
+  
     <app-button text="Ok" mat-button (click)="onNoClick()" ></app-button>
   </div>
 </div>

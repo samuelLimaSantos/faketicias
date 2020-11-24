@@ -15,11 +15,26 @@
   cursor: pointer;
 }
 
-.modal-content .description-block{
+.modal-content .description-block {
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
+}
+
+.modal-content .description-block span {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.modal-content .description-block h3 {
+  font-weight: bold;
+}
+
+.modal-content .description-block section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .modal-content .description-block app-button {

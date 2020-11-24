@@ -4,8 +4,9 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import {MatSort} from '@angular/material/sort';
 import { ModalComponent } from '../../components/modal/modal.component';
+import { ConfigService } from '../../config/config.service';
 
-interface Data {
+interface Items {
   id: string;
   name: string;
   price: string;
@@ -18,69 +19,38 @@ interface Data {
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor(public dialog: MatDialog) {}
+  
+  constructor(public dialog: MatDialog, private request: ConfigService) {}
 
   openDialog(id: string): void {
     this.dialog.open(ModalComponent, {
       width: '450px',
-      height: '220px',
       data: {id}
     });
   }
-
-
-  datas: Data[] = [
-    {
-      id: '01',
-      name: 'Hamburguer',
-      price: 'R$15,00'
-    },
-    {
-      id: '02',
-      name: 'Batata Frita',
-      price: 'R$12,00'
-    },
-    {
-      id: '03',
-      name: 'Nuggets',
-      price: 'R$9,99'
-    },{
-      id: '03',
-      name: 'Nuggets',
-      price: 'R$9,99'
-    },{
-      id: '03',
-      name: 'Nuggets',
-      price: 'R$9,99'
-    },{
-      id: '03',
-      name: 'Nuggets',
-      price: 'R$9,99'
-    },{
-      id: '03',
-      name: 'Nuggets',
-      price: 'R$9,99'
-    },{
-      id: '03',
-      name: 'Nuggets',
-      price: 'R$9,99'
-    },
-  ];
-
-  dataSource = new MatTableDataSource<Data>(this.datas);
-
+  
+  menuItems: Items[] = [] as Items[]
+  
+  dataSource = new MatTableDataSource<Items>(this.menuItems);
+  
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
+  
 
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-  }
-
+  
   displayedColumns: string[] = ['id', 'name', 'price'];
-
+  
+  
   ngOnInit(): void {
+    this.request.showAllMenuItems()
+    .subscribe((response: Items[]) => {
+      this.menuItems = response;
+      this.dataSource = new MatTableDataSource<Items>(this.menuItems);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    });
+
+
   }
 
 }

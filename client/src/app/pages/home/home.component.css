@@ -19,7 +19,11 @@
   align-items: center;
   justify-content: center;
   animation: bounceIn 1s ease-in;
+  
+}
 
+.mat-elevation-z8 {
+  min-width: 450px;
 }
 
 .home-container .table-content  div {
@@ -45,4 +49,12 @@
     grid-template-rows: 17% 85%;
 
   }
+}
+
+
+@media (max-width: 500px) {
+  .mat-elevation-z8 {
+    min-width: 300px;
+  }
+  
 }
