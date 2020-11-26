@@ -11,12 +11,10 @@ class MenuModel(db.Model):
     menu = db.relationship(RecipeModel, backref=db.backref('menu', lazy=True))
 
 
-    def __init__(self, id, name, price, description, menu):
-        self.id = id
+    def __init__(self, name, price, description):
         self.name = name
         self.price = price
         self.description = description
-        self.menu = menu
 
 
     def json(self):

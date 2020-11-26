@@ -10,12 +10,10 @@ class RecipeModel(db.Model):
 
 
 
-    def __init__(self, id, menu_id, name, quantity, menu):
-        self.id = id
+    def __init__(self, menu_id, name, quantity):
         self.menu_id = menu_id
         self.name = name
         self.quantity = quantity
-        self.menu = menu
 
     def json(self):
         return {
